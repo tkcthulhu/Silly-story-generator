@@ -30,13 +30,17 @@ function result() {
   }
 
   let newStory = storyText;
+
   const xItem = randomValueFromArray(insertX);
   const yItem = randomValueFromArray(insertY);
   const zItem = randomValueFromArray(insertZ);
 
-  storyText = storyText.replace(':insertx:', xItem);
-  storyText = storyText.replace(':inserty:', yItem);
-  storyText = storyText.replace(':insertz:', zItem);
+  newStory = newStory.replace(':insertx:', xItem);
+  newStory = newStory.replace(':inserty:', yItem);
+  newStory = newStory.replace(':insertz:', zItem);
+  newStory = newStory.replace(':insertx:', xItem);
+
+
 
   story.textContent = newStory;
   story.style.visibility = 'visible';
